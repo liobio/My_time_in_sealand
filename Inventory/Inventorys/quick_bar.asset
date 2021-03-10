@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8257d34d7d4b7e24495377e147273421, type: 3}
+  m_Name: quick_bar
+  m_EditorClassIdentifier: 
+  Item_List:
+  - {fileID: 11400000, guid: 2077f0de239873b46a35f3ea083163bc, type: 2}
+  - {fileID: 11400000, guid: e3d47a3e563609147bb2001f03de85df, type: 2}
+  - {fileID: 11400000, guid: 2f9622d516fbb8345ba1ca3df9691eca, type: 2}
+  - {fileID: 11400000, guid: c3bdfd61b330c8947b5983c7349f0d88, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
