@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: quick_bar
   m_EditorClassIdentifier: 
   Item_List:
-  - {fileID: 11400000, guid: 2077f0de239873b46a35f3ea083163bc, type: 2}
-  - {fileID: 11400000, guid: e3d47a3e563609147bb2001f03de85df, type: 2}
   - {fileID: 11400000, guid: 2f9622d516fbb8345ba1ca3df9691eca, type: 2}
+  - {fileID: 11400000, guid: e3d47a3e563609147bb2001f03de85df, type: 2}
   - {fileID: 11400000, guid: c3bdfd61b330c8947b5983c7349f0d88, type: 2}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 11400000, guid: 2077f0de239873b46a35f3ea083163bc, type: 2}
   - {fileID: 0}
   - {fileID: 0}

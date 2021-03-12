@@ -11,7 +11,7 @@ public class Slot : MonoBehaviour
     public Item slot_item;
     public Image slot_image;
     public Text slot_hold_number;
-    public int slot_number;//物品槽的序号
+    public int slot_ID;//物品槽的序号
     public GameObject iteminslot;
     public string slotinfo_name;
     public bool isuse=false;
@@ -31,7 +31,7 @@ public class Slot : MonoBehaviour
         
 
         Inventory_Manager.Updata_Item_name(slotinfo_name);
-        Wheel_select_item.sel_slot_number = slot_number;
+        Wheel_select_item.sel_slot_number = slot_ID;
 
         StartCoroutine(Delay_Disappear());
         if (slot_item == null)
@@ -90,7 +90,7 @@ public class Slot : MonoBehaviour
 
     public bool Wheel_ctr()
     {
-        if (slot_number == Wheel_select_item.sel_slot_number)
+        if (slot_ID == Wheel_select_item.sel_slot_number)
         {
             
             return true;

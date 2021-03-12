@@ -13,23 +13,26 @@ public class Tile_Item_use : MonoBehaviour
     void Update()
     {
 
-        if (use_tile_item == null)
-        {
-            return;
-        }
+        //if (use_tile_item == null)
+        //{
+        //    Debug.Log("瓦片物品为空");
+        //    return;
+        //}
 
-        if (baseTile == null)
-        {
-            return;
-        }
+        //if (baseTile == null)
+        //{
+        //    Debug.Log("没有选择瓦片"+use_tile_item.Item_name);
+        //    return;
+        //}
 
-        if (use_tile_item.itemheld < 1)
-        {
-            return;
-        }
+        //if (use_tile_item.itemheld < 1)
+        //{
+        //    Debug.Log("数量不足"+use_tile_item.Item_name);
+        //    return;
+        //}
 
         //右击空白地方创造瓦片
-        if (Input.GetMouseButtonDown(1))
+        if (use_tile_item.Item_name == "泥土" && Input.GetMouseButtonDown(1))
         {
             Vector3 mousePosition = Input.mousePosition;
             Vector3 wordPosition = Camera.main.ScreenToWorldPoint(mousePosition);

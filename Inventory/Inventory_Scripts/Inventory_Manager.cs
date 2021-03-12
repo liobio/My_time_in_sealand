@@ -26,7 +26,7 @@ public class Inventory_Manager : MonoBehaviour
     }
     private void OnEnable()
     {
-        Initialize_Item();
+        Refresh_quick_bar();
         instance.ui_item_name.text = "";
        
     }
@@ -47,24 +47,25 @@ public class Inventory_Manager : MonoBehaviour
 
     }*/
 
-    public static void Initialize_Item()
+    public static void Refresh_quick_bar()
     {
-        //for (int i = 0; i < instance.slot_gird.transform.childCount; i++) 
-        //{
-        //    if (instance.slot_gird.transform.childCount == 0)
-        //    {
-        //        break;
-        //    }
-        //    Destroy(instance.slot_gird.transform.GetChild(i).gameObject);
-        //    Debug.Log("物品栏："+i+ "已清除");
-        //}
+        for (int i = 0; i < instance.slot_gird.transform.childCount; i++)
+        {
+            if (instance.slot_gird.transform.childCount == 0)
+            {
+                break;
+            }
+            Destroy(instance.slot_gird.transform.GetChild(i).gameObject);
+            instance.slots.Clear();
+            Debug.Log("物品栏：" + i + "已清除");
+        }
         for (int i = 0; i < instance.my_inventory.Item_List.Count; i++)
         {
           //  Creat_new_Item(instance.my_inventory.Item_List[i],i);
             instance.slots.Add(Instantiate(instance.empty_slot));
             instance.slots[i].transform.SetParent(instance.slot_gird.transform,false);
             instance.slots[i].GetComponent<Slot>().Setupslot(instance.my_inventory.Item_List[i]);
-            instance.slots[i].GetComponent<Slot>().slot_number = i;
+            instance.slots[i].GetComponent<Slot>().slot_ID = i;
 
             Debug.Log(instance.slot_gird.transform.GetChild(i).gameObject + "已创建");
         }
@@ -74,7 +75,7 @@ public class Inventory_Manager : MonoBehaviour
     public static void Refresh_Item(int i)
     {
         instance.slots[i].GetComponent<Slot>().Setupslot(instance.my_inventory.Item_List[i]);
-        Debug.Log(instance.slots[i].GetComponent<Slot>().slot_number+"已刷新");
+        Debug.Log(instance.slots[i].GetComponent<Slot>().slot_ID+"已刷新");
     }
 
     public static Vector3 Get_slot_position(int number)
